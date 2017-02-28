@@ -1,0 +1,18 @@
+astree.o: astree.cpp astree.h auxlib.h type.h string_set.h lyutils.h \
+ yyparse.h symtable.h
+lyutils.o: lyutils.cpp auxlib.h lyutils.h astree.h type.h yyparse.h \
+ string_set.h
+auxlib.o: auxlib.cpp auxlib.h
+string_set.o: string_set.cpp string_set.h
+main.o: main.cpp string_set.h auxlib.h lyutils.h astree.h type.h \
+ yyparse.h symtable.h emit.h
+symstack.o: symstack.cpp type.h astree.h auxlib.h lyutils.h yyparse.h \
+ symtable.h
+symtable.o: symtable.cpp symtable.h astree.h auxlib.h type.h lyutils.h \
+ yyparse.h
+typecheck.o: typecheck.cpp type.h symtable.h astree.h auxlib.h lyutils.h \
+ yyparse.h
+emit.o: emit.cpp symtable.h astree.h auxlib.h type.h lyutils.h yyparse.h
+yylex.o: yylex.cpp auxlib.h lyutils.h astree.h type.h yyparse.h
+yyparse.o: yyparse.cpp astree.h auxlib.h type.h lyutils.h yyparse.h \
+ emit.h
